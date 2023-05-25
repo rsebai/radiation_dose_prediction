@@ -14,11 +14,17 @@ The Radiation Dose Prediction for Cancer Patients project, as part of the medica
     * 128 x 128 image
   * CT: scan of the patient
     * 128 x 128 image
-    
- ![image](https://user-images.githubusercontent.com/79949319/235660260-e6eb8358-8479-43d8-a5d3-aceccb6830dd.png)
-
+ <center>
+ <img src="https://user-images.githubusercontent.com/79949319/235660260-e6eb8358-8479-43d8-a5d3-aceccb6830dd.png" width="75%" height="75%"/>
+ </center>
+ 
 ### Approach 
-Among the presented methods and strategies, the best performant model used a U-NET like CNN with dilated convolution in order to widen the area of the input image covered without pooling. 
+Among the presented methods and strategies from the ablation study detailed in _Radiation_Dose_Prediction.pdf_, the best performant model used a U-NET like CNN with dilated convolution in order to widen the area of the input image covered without pooling, and used as inputs all 12 channels (10 OAR masks, possible dose mask and the original CT scan). Geometric data augmentation was applied. Before submitting the testing set results, we multiplied the output radiation dose by the corresponding possible dose mask, we hereby assume that we have a prior knowledge of the targeted zone of the radiation.
+
+### Inference Examples
+<center>
+ <img src="https://github.com/rsebai/radiation_dose_prediction/assets/79949319/67eeed89-9e83-44f4-ab13-c50b3109f7c9" width="75%" height="75%"/>
+ </center>
 
 
 
